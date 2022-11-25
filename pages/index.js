@@ -1,4 +1,5 @@
 import { Header as HeaderComp } from "../components/header/Header";
+import { Home as HomeComp } from "../components/home/Home";
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <main>
         <div>
           <HeaderComp />
+          <HomeComp />
         </div>
       </main>
     </>
