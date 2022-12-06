@@ -12,7 +12,7 @@ export function Heatmap() {
   const [activities, setActivities] = useState(activitiesFromFile);
 
   return (
-    <>
+    <div>
       <MapGL
         initialViewState={{
           latitude: 51,
@@ -30,6 +30,6 @@ export function Heatmap() {
         )}
       </MapGL>
       <ControlPanel activities={activities} setActivities={setActivities} />
-    </>
+    </div>
   );
 }
