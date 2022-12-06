@@ -1,9 +1,10 @@
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 
-const solutions = [
+// Collect all features which are currently implemented
+const features = [
   {
     name: "Heatmap",
-    description: "Visualize your activities on a heatmap.",
+    description: "Visualize activities on a heatmap",
     href: "/heatmap",
     icon: ChartBarIcon,
   },
@@ -14,7 +15,7 @@ export function Home() {
     <div className="">
       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-          {solutions.map((item) => (
+          {features.map((item) => (
             <a
               key={item.name}
               href={item.href}
