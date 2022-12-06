@@ -1,10 +1,6 @@
-#! usr/bin/env python
-
-from sys import argv
-from os.path import exists
 import simplejson as json
 
-data = json.load(open("src/activities.json"))
+data = json.load(open("activities.json"))
 data = [x for x in data if len(x['start_latlng']) == 2]
 
 geojson = {
@@ -21,5 +17,5 @@ geojson = {
 }
 
 
-output = open("src/activities.geojson", 'w')
+output = open("activities.geojson", 'w')
 json.dump(geojson, output)
