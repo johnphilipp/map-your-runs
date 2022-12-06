@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .mapboxgl-canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-} */
-
 /* set map size */
 .mapboxgl-canvas-container {
   height: 500px;
