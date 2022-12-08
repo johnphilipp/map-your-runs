@@ -7,10 +7,13 @@ export default function ControlTypes({
   useAllTypes,
   setUseAllTypes,
 }) {
-  // Add/remove checked item from checkedTypes list
+  // Add/remove checked item from checkedTypes list+
   const handleCheckType = (event) => {
     var updatedList = [...checkedTypes];
     if (event.target.checked) {
+      if (useAllTypes == true) {
+        setUseAllTypes(false);
+      }
       updatedList = [...checkedTypes, event.target.value];
     } else {
       updatedList.splice(checkedTypes.indexOf(event.target.value), 1);
@@ -55,7 +58,6 @@ export default function ControlTypes({
             className="flex items-center pl-4 rounded border border-gray-200 hover:bg-gray-100"
           >
             <input
-              disabled={useAllTypes}
               value={item}
               type="checkbox"
               checked={isCheckedType(item)}

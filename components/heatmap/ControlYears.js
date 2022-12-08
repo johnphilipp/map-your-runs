@@ -11,6 +11,9 @@ export default function ControlYears({
   const handleCheckYear = (event) => {
     var updatedList = [...checkedYears];
     if (event.target.checked) {
+      if (useAllYears == true) {
+        setUseAllYears(false);
+      }
       updatedList = [...checkedYears, event.target.value];
     } else {
       updatedList.splice(checkedYears.indexOf(event.target.value), 1);
@@ -55,7 +58,6 @@ export default function ControlYears({
             className="flex items-center pl-4 rounded border border-gray-200 hover:bg-gray-100"
           >
             <input
-              disabled={useAllYears}
               value={item}
               type="checkbox"
               checked={isCheckedYear(item)}
