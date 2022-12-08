@@ -48,7 +48,7 @@ export default function ControlTypes({
         </span>
       </div>
 
-      <div className="grid gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+      <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {allTypes.map((item, index) => (
           <div
             key={index}

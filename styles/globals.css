@@ -4,7 +4,7 @@
 
 /* set map size */
 .mapboxgl-canvas-container {
-  height: 400px;
+  height: 600px;
 }
 
 /* remove unnecessary info box  */
