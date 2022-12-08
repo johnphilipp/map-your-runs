@@ -1,4 +1,5 @@
 export function Header() {
+  // Header with project name, home link, and heatmap link
   return (
     <div className="mx-auto px-4 sm:px-6 border-b-2">
       <div className="flex items-center justify-between border-gray-100 py-6 md:justify-start md:space-x-10">
