@@ -1,16 +1,16 @@
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 
-// Collect all features which are currently implemented
-const features = [
-  {
-    name: "Heatmap",
-    description: "Visualize activities on a heatmap",
-    href: "/heatmap",
-    icon: ChartBarIcon,
-  },
-];
-
 export function Home() {
+  // Save all features which are implemented in a list (currently only one feature)
+  const features = [
+    {
+      name: "Heatmap",
+      description: "Visualize activities on a heatmap",
+      href: "/heatmap",
+      icon: ChartBarIcon,
+    },
+  ];
+
   return (
     <div className="">
       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
