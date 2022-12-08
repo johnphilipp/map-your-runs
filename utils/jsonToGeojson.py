@@ -1,6 +1,8 @@
 import simplejson as json
 
-data = json.load(open("activities.json"))
+# Convert json to geojson
+
+data = json.load(open("data/activities.json"))
 data = [x for x in data if len(x['start_latlng']) == 2]
 
 geojson = {
