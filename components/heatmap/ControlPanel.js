@@ -22,8 +22,12 @@ export default function ControlPanel({
       <h2 className="text-2xl">Heatmap</h2>
       <ControlMetrics
         activities={activities}
+        allTypes={allTypes}
         checkedTypes={checkedTypes}
         useAllTypes={useAllTypes}
+        allYears={allYears}
+        checkedYears={checkedYears}
+        useAllYears={useAllYears}
       />
       <ControlTypes
         allTypes={allTypes}

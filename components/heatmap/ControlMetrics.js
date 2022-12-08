@@ -1,44 +1,45 @@
 import React from "react";
-import { activities as activitiesFromFile } from "../../data/activities";
 
 export default function ControlMetrics({
   activities,
+  allTypes,
   checkedTypes,
   useAllTypes,
+  allYears,
+  checkedYears,
+  useAllYears,
 }) {
-  // Different metrics for heatmap subtitle
+  // Calculate number of activities that are currently filtered
   const metricNumActivities = activities.features.length;
-  const metricNumTypes =
-    useAllTypes == true
-      ? Array.from(
-          new Set(
-            activitiesFromFile.features.map(
-              (feature) => feature.properties.type
-            )
-          )
-        ).length
-      : checkedTypes.length;
-  const metricYearHelper = Array.from(
-    new Set(
-      activities.features.map((feature) =>
-        feature.properties.start_date_local.substring(0, 4)
-      )
-    )
-  ).sort();
-  const metricYearFrom =
-    metricYearHelper.length == 0 ? "-" : metricYearHelper[0];
-  const metricYearTo =
-    metricYearHelper.length == 0
-      ? "-"
-      : metricYearHelper[metricYearHelper.length - 1];
+
+  // Calculate number of types that are currently filtered
+  const metricNumTypes = () => {
+    if (metricNumActivities == 0) {
+      return "0";
+    }
+    return useAllTypes == true ? allTypes.length : checkedTypes.length;
+  };
+
+  // Calculate year from and year to of activities that are currently filtered
+  const metricYearFromTo = () => {
+    let metricYearHelper = useAllYears == true ? allYears : checkedYears;
+    metricYearHelper = metricNumActivities == 0 ? [] : metricYearHelper;
+    const metricYearFrom =
+      metricYearHelper.length == 0 ? "-" : metricYearHelper[0];
+    const metricYearTo =
+      metricYearHelper.length == 0
+        ? "-"
+        : metricYearHelper[metricYearHelper.length - 1];
+    return metricYearFrom + " to " + metricYearTo;
+  };
 
   return (
     <div>
       <p className="text-slate-400">
         Showing <span />
         {metricNumActivities} sports activities of <span />
-        {metricNumTypes} <span /> different types from <span />
-        {metricYearFrom} to {metricYearTo}
+        {metricNumTypes()} <span /> different types from <span />
+        {metricYearFromTo()}
       </p>
       <hr />
     </div>
