@@ -5,7 +5,7 @@ export function Home() {
   const features = [
     {
       name: "Heatmap",
-      description: "Visualize activities on a heatmap",
+      description: "Display sports activities on a heatmap",
       href: "/heatmap",
       icon: ChartBarIcon,
     },
