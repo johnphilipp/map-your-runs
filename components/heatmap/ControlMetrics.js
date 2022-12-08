@@ -33,13 +33,25 @@ export default function ControlMetrics({
     return metricYearFrom + " to " + metricYearTo;
   };
 
+  const metrics = (numActivities, numTypes, yearFromTo) => {
+    return numActivities == 0
+      ? "There are no activities to be displayed based on your current selection"
+      : "Displaying " +
+          numActivities +
+          " sports activities of " +
+          numTypes +
+          " different types from " +
+          yearFromTo;
+  };
+
+  const textColor = () => {
+    return metricNumActivities == 0 ? "text-red-400" : "text-slate-400";
+  };
+
   return (
     <div>
-      <p className="text-slate-400">
-        Showing <span />
-        {metricNumActivities} sports activities of <span />
-        {metricNumTypes()} <span /> different types from <span />
-        {metricYearFromTo()}
+      <p className={textColor()}>
+        {metrics(metricNumActivities, metricNumTypes(), metricYearFromTo())}
       </p>
       <hr />
     </div>
