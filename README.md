@@ -1,4 +1,15 @@
+# Geo-based sports activity heatmapper
+
+React/Next.js-based web app: Visualize geo-based sports activities from Strava on a heatmap
+
+<br>
+
+![image](https://user-images.githubusercontent.com/35657453/206567461-3a19f6ed-0602-4856-a35f-63da5e6626e8.png)
+
+<br>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 ## Demo
 
