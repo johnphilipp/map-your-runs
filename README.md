@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Demo
+
+Visit a deployed demo of this app on Vercel: [https://map-your-runs.vercel.app/](https://map-your-runs.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
