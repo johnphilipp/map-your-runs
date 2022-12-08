@@ -6,7 +6,7 @@ export default function ControlMetrics({
   checkedTypes,
   useAllTypes,
 }) {
-  // Metrics
+  // Different metrics for heatmap subtitle
   const metricNumActivities = activities.features.length;
   const metricNumTypes =
     useAllTypes == true
@@ -36,7 +36,7 @@ export default function ControlMetrics({
     <div>
       <p className="text-slate-400">
         Showing <span />
-        {metricNumActivities} activities of <span />
+        {metricNumActivities} sports activities of <span />
         {metricNumTypes} <span /> different types from <span />
         {metricYearFrom} to {metricYearTo}
       </p>

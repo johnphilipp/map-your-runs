@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import ControlMetrics from "./ControlMetrics";
 import ControlTypes from "./ControlTypes";
 import ControlYears from "./ControlYears";
 
-export default function ControlPanel({ activities, setActivities }) {
-  // Store which types are checked by the user via selected checkboxes
-  const [checkedTypes, setCheckedTypes] = useState([]);
-
-  // Boolean check if all types should be used
-  const [useAllTypes, setUseAllTypes] = useState(true);
-
+export default function ControlPanel({
+  activities,
+  allTypes,
+  allYears,
+  checkedTypes,
+  setCheckedTypes,
+  checkedYears,
+  setCheckedYears,
+  useAllTypes,
+  setUseAllTypes,
+  useAllYears,
+  setUseAllYears,
+}) {
+  // This component is only used to collect all control components in one place
   return (
     <div className="m-6 leading-loose text-gray-600">
       <h2 className="text-2xl">Heatmap</h2>
@@ -19,14 +26,19 @@ export default function ControlPanel({ activities, setActivities }) {
         useAllTypes={useAllTypes}
       />
       <ControlTypes
-        activities={activities}
-        setActivities={setActivities}
+        allTypes={allTypes}
         checkedTypes={checkedTypes}
         setCheckedTypes={setCheckedTypes}
         useAllTypes={useAllTypes}
         setUseAllTypes={setUseAllTypes}
       />
-      <ControlYears activities={activities} setActivities={setActivities} />
+      <ControlYears
+        allYears={allYears}
+        checkedYears={checkedYears}
+        setCheckedYears={setCheckedYears}
+        useAllYears={useAllYears}
+        setUseAllYears={setUseAllYears}
+      />
     </div>
   );
 }

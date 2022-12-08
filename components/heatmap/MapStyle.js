@@ -1,3 +1,4 @@
+// Set maximum zoom level for heatmap
 const MAX_ZOOM_LEVEL = 9;
 
 export const MapStyle = {
