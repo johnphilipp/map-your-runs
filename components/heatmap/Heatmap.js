@@ -66,7 +66,7 @@ export function Heatmap() {
   activities.features = activitiesFiltredByTypeAndYear;
 
   return (
-    <div class="md:grid md:grid-cols-2 md:gap-4">
+    <div className="md:grid md:grid-cols-2 md:gap-4">
       <MapGL
         initialViewState={{
           latitude: 51,
