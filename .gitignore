@@ -37,3 +37,4 @@ next-env.d.ts
 
 # vsc
 map-your-runs.code-workspace
+.vscode/
