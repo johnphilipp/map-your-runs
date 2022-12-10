@@ -30,12 +30,16 @@ export function Dashboard() {
           </div>
         </div>
         <div className="m-6 leading-loose text-gray-600">
-          <h2 className="text-2xl">Distance of selected type over time</h2>
+          <h2 className="sm:text-lg md:text-2xl">
+            Distance of selected type over time
+          </h2>
           <AreaChartComp
             className="z-30"
             selectedTypeChart={selectedTypeChart}
           />
-          <div className="title text-lg mt-4 ml-4">Select type:</div>
+          <div className="title sm:text-lg md:text-2xl mt-4 ml-4">
+            Select type:
+          </div>
           <DropdownComp
             className="z-210"
             allTypes={allTypes}
