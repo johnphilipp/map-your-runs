@@ -3,7 +3,7 @@ import { activities as activitiesFromFile } from "../../data/activities";
 import {
   ResponsiveContainer,
   Label,
-  BarChart,
+  BarChart as BarChartComp,
   Bar,
   CartesianGrid,
   XAxis,
@@ -11,17 +11,36 @@ import {
   Tooltip,
 } from "recharts";
 
-export function BarChartComp() {
+export function BarChart({ selectedYearChart }) {
   // Count how often each type appears in dataset
   let typeCountDict = {};
-  for (const feature of activitiesFromFile.features) {
-    if (typeCountDict[feature.properties.type]) {
-      typeCountDict[feature.properties.type] += 1;
+  for (const item of activitiesFromFile.features) {
+    if (selectedYearChart == "Select all") {
+      if (typeCountDict[item.properties.type]) {
+        typeCountDict[item.properties.type] += 1;
+      } else {
+        typeCountDict[item.properties.type] = 1;
+      }
     } else {
-      typeCountDict[feature.properties.type] = 1;
+      if (
+        item.properties.start_date_local.substring(0, 4) == selectedYearChart
+      ) {
+        if (typeCountDict[item.properties.type]) {
+          typeCountDict[item.properties.type] += 1;
+        } else {
+          typeCountDict[item.properties.type] = 1;
+        }
+      }
     }
   }
   typeCountDict = Object.entries(typeCountDict);
+
+  // Sort array by distance descending
+  typeCountDict.sort(function (first, second) {
+    if (first[1] < second[1]) return 1;
+    if (first[1] > second[1]) return -1;
+    return 0;
+  });
 
   // Create new data structure for BarChart
   const typeCountArr = [];
@@ -43,9 +62,9 @@ export function BarChartComp() {
     return <></>;
   } else {
     return (
-      <div className="z-100">
+      <div>
         <ResponsiveContainer width="95%" height={400}>
-          <BarChart width={730} height={250} data={typeCountArr}>
+          <BarChartComp width={730} height={250} data={typeCountArr}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="type" dy={10} />
             <YAxis dataKey="count">
@@ -62,7 +81,7 @@ export function BarChartComp() {
             </YAxis>
             <Tooltip />
             <Bar dataKey="count" fill="#f39c12" />
-          </BarChart>
+          </BarChartComp>
         </ResponsiveContainer>
       </div>
     );

@@ -4,26 +4,15 @@ import {
   ResponsiveContainer,
   Label,
   Area,
-  AreaChart,
+  AreaChart as AreaChartComp,
   CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
 } from "recharts";
 
-export function AreaChartComp({ selectedTypeChart }) {
-  // Count how often each type appears in dataset
-  let typeCountDict = {};
-  for (const feature of activitiesFromFile.features) {
-    if (typeCountDict[feature.properties.type]) {
-      typeCountDict[feature.properties.type] += 1;
-    } else {
-      typeCountDict[feature.properties.type] = 1;
-    }
-  }
-  typeCountDict = Object.entries(typeCountDict);
-
-  // Create new data structure for AreaChart
+export function AreaChart({ selectedTypeChart }) {
+  // Filter distances of activities where type = selectedTypeChart
   let typeLogArr = [];
   let counter = 0;
   activitiesFromFile.features.map((item) => {
@@ -52,10 +41,9 @@ export function AreaChartComp({ selectedTypeChart }) {
     return <></>;
   } else {
     return (
-      <div className="z-110">
-        <ResponsiveContainer width="95%" height={400} className="z-120">
-          <AreaChart
-            className="z-130"
+      <div>
+        <ResponsiveContainer width="95%" height={400}>
+          <AreaChartComp
             width={730}
             height={250}
             data={typeLogArr}
@@ -89,7 +77,7 @@ export function AreaChartComp({ selectedTypeChart }) {
               fillOpacity={1}
               fill="url(#colorUv)"
             />
-          </AreaChart>
+          </AreaChartComp>
         </ResponsiveContainer>
       </div>
     );
