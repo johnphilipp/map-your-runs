@@ -75,7 +75,6 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/">Home</MobileNavLink>
             <MobileNavLink href="/dashboard">Dashboard</MobileNavLink>
             <MobileNavLink href="/heatmap">Heatmap</MobileNavLink>
           </Popover.Panel>
@@ -93,17 +92,16 @@ export function Header() {
           <div className="flex items-center md:gap-x-12">
             <div className="flex items-center gap-2">
               <Link href="/" aria-label="Home">
-                <Logo className="h-14 w-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" />
+                <Logo className="-mt-4 h-12 w-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" />
               </Link>
               <a
                 href="/"
-                className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600"
+                className="-mt-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600"
               >
                 MapYourRuns
               </a>
             </div>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="/">Home</NavLink>
               <NavLink href="/dashboard">Dashboard</NavLink>
               <NavLink href="/heatmap">Heatmap</NavLink>
             </div>
