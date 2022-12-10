@@ -4,7 +4,20 @@ React/Next.js-based web app: Visualize geo-based sports activities from Strava o
 
 <br>
 
-![image](https://user-images.githubusercontent.com/35657453/206567461-3a19f6ed-0602-4856-a35f-63da5e6626e8.png)
+## Screenshots
+
+### Home
+
+![image](https://user-images.githubusercontent.com/35657453/206877360-9d5eeee2-28b8-427b-a1f0-43d8ab2cdc95.png)
+
+### Dashboard
+
+![image](https://user-images.githubusercontent.com/35657453/206877365-5a09b48b-be6c-4b23-8e50-a22ed59915ab.png)
+
+### Heatmap
+
+![image](https://user-images.githubusercontent.com/35657453/206877369-bfa9aea2-1a13-4929-b91f-42de4f5d5f6b.png)
+
 
 <br>
 
