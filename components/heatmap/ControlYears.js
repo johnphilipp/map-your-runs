@@ -35,8 +35,8 @@ export default function ControlYears({
   var isCheckedYear = (item) => (checkedYears.includes(item) ? true : false);
 
   return (
-    <div className="mt-4">
-      <div className="title">Select years to visualize:</div>
+    <div className="mt-6">
+      <div className="title text-lg mb-4">Select years:</div>
 
       <div className="mb-4 flex items-center pl-4 rounded border border-gray-200 hover:bg-gray-100">
         <input

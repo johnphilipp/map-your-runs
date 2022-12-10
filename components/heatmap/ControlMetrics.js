@@ -45,7 +45,9 @@ export default function ControlMetrics({
   };
 
   const textColor = () => {
-    return metricNumActivities == 0 ? "text-red-400" : "text-slate-400";
+    return metricNumActivities == 0
+      ? "text-red-400 text-lg mb-2 mt-2"
+      : "text-slate-400 text-lg mb-2 mt-2";
   };
 
   return (

@@ -19,7 +19,7 @@ export default function ControlPanel({
   // This component is only used to collect all control components in one place
   return (
     <div className="m-6 leading-loose text-gray-600">
-      <h2 className="text-2xl">Heatmap</h2>
+      <h2 className="text-4xl">Heatmap</h2>
       <ControlMetrics
         activities={activities}
         allTypes={allTypes}
