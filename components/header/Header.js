@@ -31,6 +31,12 @@ export function Header() {
           Home
         </a>
         <a
+          href="/dashboard"
+          className="text-base font-medium text-gray-500 hover:text-gray-900"
+        >
+          Dashboard
+        </a>
+        <a
           href="/heatmap"
           className="text-base font-medium text-gray-500 hover:text-gray-900"
         >
