@@ -116,6 +116,7 @@ export function Heatmap() {
           </div>
         </div>
         <br />
+        <br />
       </Container>
     </div>
   );
