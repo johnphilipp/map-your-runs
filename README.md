@@ -2,7 +2,11 @@
 
 React/Next.js-based web app: Visualize geo-based sports activities from Strava on a heatmap
 
-<br>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Demo
+
+Visit <u>**[https://map-your-runs.vercel.app/](https://map-your-runs.vercel.app/)**</u> for a deployed demo of this app on Vercel.
 
 ## Screenshots
 
@@ -17,16 +21,6 @@ React/Next.js-based web app: Visualize geo-based sports activities from Strava o
 ### Heatmap
 
 ![image](https://user-images.githubusercontent.com/35657453/206877369-bfa9aea2-1a13-4929-b91f-42de4f5d5f6b.png)
-
-
-<br>
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
-## Demo
-
-Visit a deployed demo of this app on Vercel: [https://map-your-runs.vercel.app/](https://map-your-runs.vercel.app/)
 
 ## Getting Started
 
