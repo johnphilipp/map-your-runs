@@ -4,10 +4,22 @@
 
 /* set map size */
 .mapboxgl-canvas-container {
-  height: 600px;
+  height: 500px;
 }
 
 /* remove unnecessary info box  */
 .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
   height: 0px;
+}
+
+/* set map border and shadow */
+.mapboxgl-canvas {
+  border-radius: 10px;
+}
+
+/* new tailwind css class */
+@layer base {
+  .font-outline-1 {
+    -webkit-text-stroke: 1px black;
+  }
 }
