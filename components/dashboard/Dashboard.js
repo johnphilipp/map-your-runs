@@ -38,23 +38,20 @@ export function Dashboard() {
         <h2 className="text-slate-400 text-lg md:text-xl font-light mb-8 mt-2">
           Analyze your activities
         </h2>
-        <div className="2xl:grid 2xl:grid-cols-2 2xl:gap-6">
-          <div className="mb-6 2xl:mb-0 p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-6">
+          <div className="p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             <h2 className="title text-lg md:text-xl mb-4">
               Count of all activities by type
             </h2>
             <BarChart selectedYearChart={selectedYearChart} />
-            {/* hidding dropdown for small screens because there is a bug with overflow / z-index */}
-            <div className="hidden 2xl:block ">
-              <p className="mt-8 title text-lg md:text-xl mb-2">Select year:</p>
-              <DropdownYear
-                allYears={allYears}
-                selectedYearChart={selectedYearChart}
-                setSelectedYearChart={setSelectedYearChart}
-              />
-            </div>
+            <p className="mt-8 title text-lg md:text-xl mb-2">Select year:</p>
+            <DropdownYear
+              allYears={allYears}
+              selectedYearChart={selectedYearChart}
+              setSelectedYearChart={setSelectedYearChart}
+            />
           </div>
-          <div className="p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="mt-8 xl:mt-0 p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             <h2 className="title text-lg md:text-xl mb-4">
               Distance of selected type over time
             </h2>
@@ -67,6 +64,7 @@ export function Dashboard() {
             />
           </div>
         </div>
+        <br />
         <br />
       </Container>
     </div>

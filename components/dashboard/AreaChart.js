@@ -42,7 +42,11 @@ export function AreaChart({ selectedTypeChart }) {
   } else {
     return (
       <div>
-        <ResponsiveContainer width="95%" height={400}>
+        <ResponsiveContainer
+          width="95%"
+          height={400}
+          className="-z-10 relative"
+        >
           <AreaChartComp
             width={730}
             height={250}
@@ -63,7 +67,7 @@ export function AreaChart({ selectedTypeChart }) {
                   fontSize: "100%",
                   fill: "#7f8c8d",
                 }}
-                dx={-25}
+                dx={-20}
                 angle={270}
                 value={"Distance (km)"}
               />
