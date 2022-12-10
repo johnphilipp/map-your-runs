@@ -4,6 +4,12 @@ export function Home() {
   // Save all features which are implemented in a list (currently only one feature)
   const features = [
     {
+      name: "Dashboard",
+      description: "View sports activity analysis dashboard",
+      href: "/dashboard",
+      icon: ChartBarIcon,
+    },
+    {
       name: "Heatmap",
       description: "Display sports activities on a heatmap",
       href: "/heatmap",
