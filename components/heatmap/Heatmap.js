@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import MapGL, { Source, Layer } from "react-map-gl";
-import ControlPanel from "./ControlPanel";
 import { MapStyle } from "./MapStyle";
 import { activities as activitiesFromFile } from "../../data/activities";
+import { Container } from "../utils/Container";
+import ControlMetrics from "./ControlMetrics";
+import ControlTypes from "./ControlTypes";
+import ControlYears from "./ControlYears";
 
 // Read mapbox api token from .env.local
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -66,36 +69,54 @@ export function Heatmap() {
   activities.features = activitiesFiltredByTypeAndYear;
 
   return (
-    <div className="md:grid md:grid-cols-2 md:gap-4">
-      <MapGL
-        initialViewState={{
-          latitude: 51,
-          longitude: 7,
-          zoom: 3,
-        }}
-        mapStyle="mapbox://styles/mapbox/dark-v9"
-        projection={"globe"}
-        mapboxAccessToken={MAPBOX_TOKEN}
-      >
-        {activities && (
-          <Source type="geojson" data={activities}>
-            <Layer {...MapStyle} />
-          </Source>
-        )}
-      </MapGL>
-      <ControlPanel
-        activities={activities}
-        allTypes={allTypes}
-        allYears={allYears}
-        checkedTypes={checkedTypes}
-        setCheckedTypes={setCheckedTypes}
-        checkedYears={checkedYears}
-        setCheckedYears={setCheckedYears}
-        useAllTypes={useAllTypes}
-        setUseAllTypes={setUseAllTypes}
-        useAllYears={useAllYears}
-        setUseAllYears={setUseAllYears}
-      />
+    <div className="z-60">
+      <Container>
+        <h1 className="text-gray-600 text-3xl font-medium">Heatmap</h1>
+        <ControlMetrics
+          activities={activities}
+          allTypes={allTypes}
+          checkedTypes={checkedTypes}
+          useAllTypes={useAllTypes}
+          allYears={allYears}
+          checkedYears={checkedYears}
+          useAllYears={useAllYears}
+        />
+        <div className="mt-8 md:grid lg:grid-cols-2 gap-6">
+          <MapGL
+            initialViewState={{
+              latitude: 51,
+              longitude: 7,
+              zoom: 3,
+            }}
+            mapStyle="mapbox://styles/mapbox/dark-v9"
+            projection={"globe"}
+            mapboxAccessToken={MAPBOX_TOKEN}
+          >
+            {activities && (
+              <Source type="geojson" data={activities}>
+                <Layer {...MapStyle} />
+              </Source>
+            )}
+          </MapGL>
+          <div className="mt-6 lg:mt-0">
+            <ControlTypes
+              allTypes={allTypes}
+              checkedTypes={checkedTypes}
+              setCheckedTypes={setCheckedTypes}
+              useAllTypes={useAllTypes}
+              setUseAllTypes={setUseAllTypes}
+            />
+            <ControlYears
+              allYears={allYears}
+              checkedYears={checkedYears}
+              setCheckedYears={setCheckedYears}
+              useAllYears={useAllYears}
+              setUseAllYears={setUseAllYears}
+            />
+          </div>
+        </div>
+        <br />
+      </Container>
     </div>
   );
 }

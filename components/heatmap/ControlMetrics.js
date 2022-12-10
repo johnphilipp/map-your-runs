@@ -46,8 +46,8 @@ export default function ControlMetrics({
 
   const textColor = () => {
     return metricNumActivities == 0
-      ? "text-red-400 text-lg mb-2 mt-2"
-      : "text-slate-400 text-lg mb-2 mt-2";
+      ? "text-red-400 text-lg md:text-xl font-light mb-2 mt-2 mb-8"
+      : "text-slate-400 text-lg md:text-xl font-light mb-2 mt-2 mb-8";
   };
 
   return (
@@ -55,7 +55,6 @@ export default function ControlMetrics({
       <p className={textColor()}>
         {metrics(metricNumActivities, metricNumTypes(), metricYearFromTo())}
       </p>
-      <hr />
     </div>
   );
 }
