@@ -99,7 +99,7 @@ export function Header() {
                 href="/"
                 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600"
               >
-                MapYourRun
+                MapYourRuns
               </a>
             </div>
             <div className="hidden md:flex md:gap-x-6">
