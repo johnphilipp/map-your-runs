@@ -50,7 +50,7 @@ export default function ControlTypes({
               onChange={handleCheckUseAllTypes}
               className="w-5 h-5 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
-            <span className="py-2 ml-4 w-full text-md font-medium text-gray-900">
+            <span className="py-1 ml-4 w-full text-md font-medium text-gray-900">
               Select all
             </span>
           </div>
@@ -68,7 +68,7 @@ export default function ControlTypes({
                   onChange={handleCheckType}
                   className="w-5 h-5 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
                 />
-                <span className="py-2 ml-4 w-full text-md font-medium text-gray-900">
+                <span className="py-1 ml-4 w-full text-md font-medium text-gray-900">
                   {item}
                 </span>
               </div>
