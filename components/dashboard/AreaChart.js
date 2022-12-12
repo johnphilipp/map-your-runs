@@ -44,7 +44,7 @@ export function AreaChart({ selectedTypeChart }) {
       <div>
         <ResponsiveContainer
           width="95%"
-          height={400}
+          height={300}
           className="-z-10 relative"
         >
           <AreaChartComp

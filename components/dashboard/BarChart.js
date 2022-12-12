@@ -63,7 +63,7 @@ export function BarChart({ selectedYearChart }) {
   } else {
     return (
       <div>
-        <ResponsiveContainer width="95%" height={400}>
+        <ResponsiveContainer width="95%" height={300}>
           <BarChartComp width={730} height={250} data={typeCountArr}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="type" dy={10} />
