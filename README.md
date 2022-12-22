@@ -200,7 +200,7 @@ The features are then iterated over in the JavaScript-enabled HTML:
 
 ---
 
-### 3.4) Dashboard Component
+### 4.4) Dashboard Component
 
 #### Component Preview:
 
@@ -342,7 +342,7 @@ The DropdownType.js filters for the type of activity the user selected and displ
 
 ---
 
-### 3.5) Heatmap Component
+### 4.5) Heatmap Component
 
 #### Component Preview:
 
