@@ -21,7 +21,7 @@ export function Home() {
     {
       name: "Collage",
       description: "Create a collage from your sports activities",
-      href: "/heatmap",
+      href: "/collage",
       icon: PhotoIcon,
     },
   ];
