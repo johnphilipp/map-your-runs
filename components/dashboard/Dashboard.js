@@ -38,7 +38,7 @@ export function Dashboard() {
         <h2 className="text-slate-400 text-lg md:text-xl font-light mb-8 mt-2">
           Analyze your activities
         </h2>
-        <div className="xl:grid xl:grid-cols-2 xl:gap-6">
+        <div className="md:grid md:grid-cols-2 md:gap-6">
           <div className="p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             <h2 className="title text-lg md:text-xl mb-4">
               Count of all activities by type
@@ -51,7 +51,7 @@ export function Dashboard() {
               setSelectedYearChart={setSelectedYearChart}
             />
           </div>
-          <div className="mt-8 xl:mt-0 p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="mt-8 md:mt-0 p-6 text-gray-600 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             <h2 className="title text-lg md:text-xl mb-4">
               Distance of selected type over time
             </h2>

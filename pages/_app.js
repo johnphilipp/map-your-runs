@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { PosterProvider } from "../providers/PosterProvider";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +8,9 @@ function MyApp({ Component, pageProps }) {
         href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css"
         rel="stylesheet"
       />
-      <Component {...pageProps} />
+      <PosterProvider>
+        <Component {...pageProps} />
+      </PosterProvider>
     </>
   );
 }

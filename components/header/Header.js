@@ -77,6 +77,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="/dashboard">Dashboard</MobileNavLink>
             <MobileNavLink href="/heatmap">Heatmap</MobileNavLink>
+            <MobileNavLink href="/collage">Collage</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -104,6 +105,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/dashboard">Dashboard</NavLink>
               <NavLink href="/heatmap">Heatmap</NavLink>
+              <NavLink href="/collage">Collage</NavLink>
             </div>
           </div>
           <div className="-mr-1 md:hidden">

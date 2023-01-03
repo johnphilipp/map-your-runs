@@ -9,22 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@glideapps/glide-data-grid": "^5.2.1",
     "@headlessui/react": "^1.7.5",
     "@heroicons/react": "^2.0.13",
+    "@mapbox/polyline": "^1.1.1",
     "clsx": "^1.2.1",
     "dotenv": "^16.0.3",
     "i": "^0.3.7",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
     "mapbox-gl": "^2.11.0",
+    "marked": "^4.2.5",
     "next": "13.0.5",
     "npm": "^9.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-map-gl": "^7.0.19",
+    "react-responsive-carousel": "^3.2.23",
     "recharts": "^2.2.0"
   },
   "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "typescript": "4.9.4"
   }
 }

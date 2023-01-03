@@ -81,7 +81,7 @@ export function Heatmap() {
           checkedYears={checkedYears}
           useAllYears={useAllYears}
         />
-        <div className="mt-8 md:grid lg:grid-cols-2 gap-6">
+        <div className="mt-8 md:grid md:grid-cols-2 md:gap-6">
           <MapGL
             initialViewState={{
               latitude: 51,
@@ -98,7 +98,7 @@ export function Heatmap() {
               </Source>
             )}
           </MapGL>
-          <div className="mt-6 lg:mt-0">
+          <div className="mt-6 md:mt-0">
             <ControlTypes
               allTypes={allTypes}
               checkedTypes={checkedTypes}

@@ -1,5 +1,6 @@
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { MapIcon } from "@heroicons/react/24/outline";
+import { PhotoIcon } from "@heroicons/react/24/outline";
 import { Container } from "../utils/Container";
 
 export function Home() {
@@ -16,6 +17,12 @@ export function Home() {
       description: "Display sports activities on a heatmap",
       href: "/heatmap",
       icon: MapIcon,
+    },
+    {
+      name: "Collage",
+      description: "Create a collage from your sports activities",
+      href: "/heatmap",
+      icon: PhotoIcon,
     },
   ];
 
