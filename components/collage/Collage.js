@@ -21,7 +21,7 @@ export function Collage() {
   return (
     <Container>
       <h1 className="text-gray-600 text-3xl font-medium">Collage</h1>
-      <h2 className="text-red-400 text-slate-400 text-lg md:text-xl font-light mb-8 mt-2">
+      <h2 className="text-red-400 text-lg md:text-xl font-light mb-8 mt-2">
         * This feature is WIP *
       </h2>
       <div className="md:grid md:grid-cols-3 md:gap-6">
@@ -38,6 +38,8 @@ export function Collage() {
       </div>
       {/* Width: {width}
       Height: {height} */}
+      <br />
+      <br />
     </Container>
   );
 }

@@ -40,7 +40,7 @@ export default function ControlYears({
         <div className="m-6">
           <div className="title text-lg md:text-xl mb-4">Select years:</div>
 
-          <div className="mb-4 flex items-center pl-4 overflow-hidden rounded-lg ring-1 ring-black ring-opacity-10 hover:bg-gray-50">
+          <div className="mb-4 flex items-center pl-4 overflow-hidden rounded-md shadow hover:bg-gray-50">
             <input
               value="useAllYears"
               type="checkbox"
@@ -48,7 +48,7 @@ export default function ControlYears({
               onChange={handleCheckUseAllYears}
               className="w-5 h-5 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
-            <span className="py-2 ml-4 w-full font-medium text-gray-900">
+            <span className="py-1 ml-4 w-full font-medium text-gray-900">
               Select all
             </span>
           </div>
@@ -57,7 +57,7 @@ export default function ControlYears({
             {allYears.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center pl-4 overflow-hidden rounded-lg ring-1 ring-black ring-opacity-10 hover:bg-gray-50"
+                className="flex items-center pl-4 overflow-hidden rounded-md shadow hover:bg-gray-50"
               >
                 <input
                   value={item}
@@ -66,7 +66,7 @@ export default function ControlYears({
                   onChange={handleCheckYear}
                   className="w-5 h-5 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
                 />
-                <span className="py-2 ml-4 w-full font-medium text-gray-900">
+                <span className="py-1 ml-4 w-full font-medium text-gray-900">
                   {item}
                 </span>
               </div>

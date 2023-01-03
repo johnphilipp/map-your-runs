@@ -25,7 +25,7 @@ function InputForm({ text, onTypeFn }: any) {
           type="email"
           name="email"
           id="email"
-          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block h-8 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           onChange={debouncedEventHandler}
         />
       </div>
@@ -76,7 +76,7 @@ export function PosterControlForm() {
     <Toggle key="hello" value={grid} setValue={setGrid} title={"Grid"} />,
     <div key="whatsup">
       <InputForm
-        text={"Enter amount of randoms runs"}
+        text={"Enter number of runs (e.g., 100"}
         onTypeFn={handleFormSubmit}
       />
     </div>,
@@ -92,7 +92,7 @@ export function PosterControlForm() {
       {items.map((item) => (
         <li
           key={item.key}
-          className="overflow-hidden rounded-md bg-white px-6 py-4 shadow"
+          className="overflow-hidden rounded-md bg-white px-6 py-4 shadow hover:bg-gray-50"
         >
           {item}
         </li>

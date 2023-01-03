@@ -42,7 +42,7 @@ export default function ControlTypes({
             Select activities:
           </div>
 
-          <div className="mb-4 flex items-center pl-4 overflow-hidden rounded-lg ring-1 ring-black ring-opacity-10 hover:bg-gray-50">
+          <div className="mb-4 flex items-center pl-4 overflow-hidden rounded-md shadow hover:bg-gray-50">
             <input
               value="useAllTypes"
               type="checkbox"
@@ -59,7 +59,7 @@ export default function ControlTypes({
             {allTypes.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center pl-4 overflow-hidden rounded-lg ring-1 ring-black ring-opacity-10 hover:bg-gray-50"
+                className="flex items-center pl-4 overflow-hidden rounded-md shadow hover:bg-gray-50"
               >
                 <input
                   value={item}
