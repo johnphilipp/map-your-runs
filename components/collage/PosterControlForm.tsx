@@ -76,7 +76,7 @@ export function PosterControlForm() {
     <Toggle key="hello" value={grid} setValue={setGrid} title={"Grid"} />,
     <div key="whatsup">
       <InputForm
-        text={"Enter number of runs (e.g., 100"}
+        text={"Enter number of runs (e.g., 100)"}
         onTypeFn={handleFormSubmit}
       />
     </div>,
